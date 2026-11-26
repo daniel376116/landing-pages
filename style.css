@@ -1,131 +1,420 @@
-body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9fafb;
-    color: #111827;
+/* ==================================================
+   ETAPA 01 - RESET CSS
+   ================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.navbar{
-    background-color: #4f46e5;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
+/* ==================================================
+   ETAPA 02 - CONFIGURAÇÕES GLOBAIS
+   ================================================== */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #F9FAFB;
+  color: #111827;
 }
 
-*{
-    margin: 0%;
+
+/* ==================================================
+   ETAPA 03 - BARRA DE NAVEGAÇÃO
+   ================================================== */
+
+.navbar {
+  background-color: #4F46E5;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.logo{
-    color: #fff;
-    font-size: 1.5rem;
-    font-weight: bold;
+
+/* ==================================================
+   ETAPA 04 - LOGOTIPO E LINKS DE NAVEGAÇÃO
+   ================================================== */
+
+/* Logotipo */
+.logo {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-.nav-links{
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
+/* Lista de navegação */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
 }
 
-.nav-links a{
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
+/* Links */
+.nav-links a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
-.nav-links a:hover{
-    color: #e0e7ff;
+/* Efeito ao passar o mouse */
+.nav-links a:hover {
+  color: #E0E7FF;
 }
 
-.hero{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 4rem 2rem;
-    background-color: #f9fafb;
+
+/* ==================================================
+   ETAPA 06 - SEÇÃO PRINCIPAL (HERO)
+   ================================================== */
+
+/* Estrutura da seção */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background-color: #F9FAFB;
 }
 
-.hero-texto{
-    max-width: 500px;
+/* Área de texto */
+.hero-texto {
+  /*flex: 1;*/
+  max-width: 500px;
 }
 
-.hero-texto h1{
-    font-size: 2.5rem;
-    color: #111827;
-    margin-bottom: 1rem;
+/* Título principal */
+.hero-texto h1 {
+  font-size: 2.5rem;
+  color: #111827;
+  margin-bottom: 1rem;
 }
 
-.hero-texto p{
-    font-size: 1.125rem;
-    color: #6b7280;
-    margin-bottom: 2rem;
+/* Parágrafo */
+.hero-texto p {
+  font-size: 1.125rem;
+  color: #6B7280;
+  margin-bottom: 2rem;
 }
 
-/* Imagem responsiva*/
+/* Área da imagem */
+.hero-imagem {
+  /*flex: 1;*/ /* Permite que a imagem ocupe o espaço restante */
+  text-align: center;
+}
 
+/* Imagem responsiva */
 .hero-imagem img {
-    max-width: 110%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
+
+/* ==================================================
+   ETAPA 07 - BOTÃO DE CHAMADA PARA AÇÃO (CTA)
+   ================================================== */
+
+/* Estilo do botão */
 .btn-cta {
-    background-color: #4f46e5;
-    color: #ffffff;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.35;
+  background-color: #4F46E5;
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
 }
-/* Efeito  ao passar o mouse */
+
+/* Efeito ao passar o mouse */
 .btn-cta:hover {
-    background-color: #4338ca;
+  background-color: #4338CA;
 }
 
-.conteudo{
-    padding: 4rem 2rem;
-    background-color: #ffffff;
-    text-align: center;
+
+/* ==================================================
+   ETAPA 08 - SEÇÃO DE CONTEÚDO E CARDS
+   ================================================== */
+
+/* Estrutura da seção */
+.conteudo {
+  padding: 4rem 2rem;
+  background-color: #FFFFFF;
+  text-align: center;
 }
 
-/* Título seção*/
-.conteudo h2{
-    font-size: 2rem;
-    color: #111827;
-    margin-bottom: 2rem;
+/* Título da seção */
+.conteudo h2 {
+  font-size: 2rem;
+  color: #111827;
+  margin-bottom: 2rem;
 }
 
-/* Container dos cards*/
-.cards{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
+/* Container dos cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
 }
 
-.card{
+/* Estilo individual dos cards */
+.card {
+  background-color: #F3F4F6;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 300px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+/* Efeito ao passar o mouse */
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Título do card */
+.card h3 {
+  color: #4F46E5;
+  margin-bottom: 1rem;
+}
+
+/* Texto do card */
+.card p {
+  color: #6B7280;
+}
+
+.exemplos {
+  padding: 4rem 2rem;
+  background-color: #FFFFFF;
+  text-align: center;
+}
+
+/* Título */
+.exemplos h2 {
+  font-size: 2rem;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+/* Descrição */
+.exemplos-descricao {
+  color: #6B7280;
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
+}
+
+/* Container dos exemplos */
+.exemplos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Card de exemplo */
+.exemplo-card {
+  background-color: #F3F4F6;
+  border-radius: 1rem;
+  overflow: hidden; /* Garante que a imagem não ultrapasse os limites do card */
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+/* Efeito ao passar o mouse */
+.exemplo-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Imagem do exemplo */
+.exemplo-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Título do card */
+.exemplo-card h3 {
+  font-size: 1.25rem;
+  margin: 1rem 1rem 0.5rem;
+  color: #4F46E5;
+}
+
+/* Descrição do card */
+.exemplo-card p {
+  color: #4B5563;
+  margin: 0 1rem 1.5rem;
+  font-size: 0.95rem;
+}
+
+.depoimento{
     background-color: #f3f4f6;
     padding: 2rem;
     border-radius: 1rem;
     max-width: 300px;
     box-shadow: 0 4px 6px rgba(0,0,0,0,1);
-    transition: transform 0,3s;
+    transition: transform 0.3s;
 }
 
-.card:hover{
-    transform: translateY(-5px)
+.depoimentos-grid img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-/* Título do card*/
-.card h3{
-    color: #4f46e5;
-    margin-bottom: 1rem;
+.depoimentos-grid{
+     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
 }
 
-/* Texto do card*/
-.card p{
-    color: #6b7280;
+.depoimentos h2{
+     text-align: center;
+     margin-bottom: 30px;
+}
+
+.depoimento p{
+    text-align: center;
+}
+
+.depoimento span {
+  color: #4f46e5;
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.depoimento:hover{
+    transform: translateY(-5px);
+}
+
+.secao-aprendizado {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.cabecalho-secao {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.cabecalho-secao h2 {
+  font-size: 28px;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.cabecalho-secao p {
+  font-size: 15px;
+  color: #64748b;
+}
+
+.lista-passos {
+  display: flex;
+  flex-direction: column;    /* Empilha os 3 cartões um embaixo do outro */
+  gap: 18px;                 /* Espaço vertical entre cada cartão */
+}
+
+.passo-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 22px 26px;
+  display: flex;             /* Coloca a bolinha azul ao lado do texto */
+  align-items: center;       /* Alinha a bolinha no meio da altura do texto */
+  gap: 20px;                 /* Distância entre a bolinha e o texto */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+/* Faz o círculo azul perfeito */
+.numero {
+  background-color: #1d4ed8; /* Azul royal vibrante */
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 16px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;        /* Transforma o quadrado 38x38 em um círculo */
+  display: flex;
+  align-items: center;       /* Centraliza o número na vertical */
+  justify-content: center;   /* Centraliza o número na horizontal */
+  flex-shrink: 0;            /* Impede que o círculo amasse em telas menores */
+}
+
+.conteudo-passo h3 {
+  font-size: 17px;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.conteudo-passo p {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* Fundo azul de ponta a ponta */
+.rodape-azul {
+  background-color: #0b5ed7; /* Azul vibrante igual ao da tela */
+  color: #ffffff;
+  margin-top: 60px;          /* Afasta o rodapé dos cartões de cima */
+  padding: 40px 20px 20px;
+}
+
+/* Alinha as duas colunas e limita a largura igual aos cartões */
+.rodape-conteudo {
+  max-width: 850px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; /* Joga um bloco para cada ponta */
+  align-items: flex-start;
+  padding-bottom: 30px;
+}
+
+.rodape-info {
+  max-width: 280px;          /* Faz a frase quebrar em duas linhas igual ao print */
+}
+
+.rodape-info h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.rodape-info p {
+  font-size: 13px;
+  color: #dbeafe;            /* Branco levemente azulado */
+  line-height: 1.5;
+}
+
+/* Estiliza a lista de links da direita */
+.rodape-links {
+  list-style: none;          /* Remove as bolinhas padrão da lista */
+  display: flex;
+  flex-direction: column;    /* Empilha os links um embaixo do outro */
+  gap: 8px;                  /* Espaço entre cada link */
+}
+
+.rodape-links a {
+  color: #dbeafe;
+  text-decoration: none;     /* Tira o sublinhado padrão dos links */
+  font-size: 13px;
+}
+
+.rodape-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Barra final de Copyright */
+.rodape-copyright {
+  max-width: 850px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Linha fina transparente */
+  padding-top: 18px;
+  text-align: center;
+  font-size: 12px;
+  color: #dbeafe;
 }
