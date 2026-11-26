@@ -9,6 +9,13 @@
 <body>
     <nav class="navbar">
         <div class="logo">SENAI</div>
+
+        <button class="menu-toggle" arla-label="Abrir menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
         <ul class="nav-links">
             <li><a href="#">Ínicio</a></li>
             <li><a href="#">Conteúdo</a></li>
@@ -156,7 +163,15 @@
     </div>
   </footer>
 
+    <script>
+        const toggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector("nav-links");
 
-        </main>
-    </body>
+        toggle.addEventListener("click", () => {
+            toggle.classList.toggle("active");
+            navLinks.classList.toggle("show");
+        });
+    </script>
+    </main>
+  </body>
 </html>
